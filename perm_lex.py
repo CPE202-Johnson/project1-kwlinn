@@ -20,4 +20,3 @@ def perm_gen_lex(input):
     return result
     
 # print(perm_gen_lex(' '.join(sys.argv[1:])))
- 
