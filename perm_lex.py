@@ -4,7 +4,9 @@
 
 def perm_gen_lex(input):
     result = []
-    if len(input) <= 1:
+    if len(input) == 0:
+        return result
+    if len(input) == 1:
         result.append(input)
     else: 
         for character in input: #loop through every letter
@@ -15,8 +17,8 @@ def perm_gen_lex(input):
             for chr in x: #then for each of those permutations, we prepend the current character in the outer loop
                 result.append(character + chr)
                 
-            result = list(dict.fromkeys(result)) #this trick removes duplicates from the list
-        result.sort()
+        #     result = list(dict.fromkeys(result)) #removes duplicates from the list
+        # result.sort()
     return result
     
 # print(perm_gen_lex(' '.join(sys.argv[1:])))
